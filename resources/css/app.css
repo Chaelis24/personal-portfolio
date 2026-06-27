@@ -1,0 +1,128 @@
+@import url("https://api.fontshare.com/v2/css?f[]=clash-grotesk@400,500,600,700&display=swap");
+
+body {
+    background-color: #030712;
+    color: #cbd5e1;
+    overflow-x: hidden;
+    font-family: "Inter", sans-serif;
+}
+
+.clash-grotesk {
+    font-family: "Clash Grotesk", sans-serif;
+}
+
+/* Navbar Styling */
+#navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1050;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+    transition: all 0.3s ease;
+}
+
+#navbar.scrolled {
+    background-color: rgba(3, 7, 18, 0.7) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 0.8rem 1rem !important;
+}
+
+.nav-link-custom {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+.nav-link-custom:hover {
+    color: #6366f1;
+    opacity: 1;
+}
+
+/* Hero & Effects */
+.text-gradient {
+    background: linear-gradient(to right, #6366f1, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.Home_pill {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    color: #94a3b8;
+}
+
+.bg-blob {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(
+        circle,
+        rgba(99, 102, 241, 0.15) 0%,
+        transparent 70%
+    );
+    filter: blur(80px);
+    z-index: -1;
+}
+
+/* Cards Styling */
+.glass-card {
+    background: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.glass-card:hover {
+    border-color: rgba(99, 102, 241, 0.5) !important;
+    background: rgba(255, 255, 255, 0.07) !important;
+    transform: translateY(-5px);
+}
+
+.transition-up {
+    transition: transform 0.3s ease;
+}
+
+.aspect-ratio-16-9 {
+    aspect-ratio: 16 / 9;
+}
+
+.card-img-hover {
+    transition: transform 0.5s ease;
+}
+
+.glass-card:hover .card-img-hover {
+    transform: scale(1.05);
+}
+
+/* Mobile Menu */
+#mobile-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 1040;
+    background-color: #030712;
+    transform: translateX(100%);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#mobile-menu.active {
+    transform: translateX(0);
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
